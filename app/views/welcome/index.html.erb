@@ -1,0 +1,23 @@
+<h1>Welcome to the words app</h1>
+<p>Find me in app/views/welcome/index.html.erb</p>
+
+<h2> word of the day</h2>
+
+
+
+<div class='container p-3 my-3 border'>
+  <div class="card">
+    <h1>Look up the word!</h1>
+    <div class="container p-3 my-3 border">
+      <%= form_tag("/word", method: "post") do %>
+        <%= label_tag(:q, "") %>
+        <span>Enter key word:</span>
+        
+        <%= text_field_tag(:q) %>
+        <br><br>
+        <%= submit_tag("Search") %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
